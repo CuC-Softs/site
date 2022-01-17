@@ -23,7 +23,7 @@ const Header: React.FC = () => (
       <Image src="../assets/Logo.png" alt="logo" />
       <Box w="50%" display="flex" justifyContent="space-between">
         <Link
-          href="/about"
+          href="/"
           color="black"
           w="86px"
           h="36px"
@@ -32,34 +32,10 @@ const Header: React.FC = () => (
           justifyContent="center"
           alignItems="center"
         >
-          Home
+          Início
         </Link>
         <Link
-          href="/about"
-          color="black"
-          w="86px"
-          h="36px"
-          borderRadius="18px"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
-          About
-        </Link>
-        <Link
-          href="/about"
-          color="black"
-          w="86px"
-          h="36px"
-          borderRadius="18px"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-        >
-          Contact
-        </Link>
-        <Link
-          href="/about"
+          href="/team"
           color="black"
           w="86px"
           h="36px"
@@ -72,6 +48,30 @@ const Header: React.FC = () => (
         </Link>
         <Link
           href="/about"
+          color="black"
+          w="86px"
+          h="36px"
+          borderRadius="18px"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          Sobre nós
+        </Link>
+        <Link
+          href="/products"
+          color="black"
+          w="86px"
+          h="36px"
+          borderRadius="18px"
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+        >
+          Produtos
+        </Link>
+        <Link
+          href="/init"
           color="white"
           w="156px"
           h="36px"
@@ -81,7 +81,7 @@ const Header: React.FC = () => (
           justifyContent="center"
           alignItems="center"
         >
-          About
+          Comece aqui
         </Link>
       </Box>
     </Box>

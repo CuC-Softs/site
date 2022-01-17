@@ -65,7 +65,7 @@ const HeaderMobile: React.FC = () => {
               flexDirection="column"
             >
               <Link
-                href="/about"
+                href="/"
                 color="white"
                 w={{
                   base: '100%',
@@ -82,7 +82,7 @@ const HeaderMobile: React.FC = () => {
                 Início
               </Link>
               <Link
-                href="/about"
+                href="/team"
                 color="white"
                 w={{
                   base: '100%',
@@ -116,7 +116,7 @@ const HeaderMobile: React.FC = () => {
                 Sobre nós
               </Link>
               <Link
-                href="/about"
+                href="/products"
                 color="white"
                 w={{
                   base: '100%',
@@ -133,7 +133,7 @@ const HeaderMobile: React.FC = () => {
                 Produtos
               </Link>
               <Link
-                href="/about"
+                href="/init"
                 color="white"
                 w={{
                   base: '100%',
