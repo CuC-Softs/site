@@ -14,7 +14,7 @@ const HeaderMobile: React.FC = () => {
       bgColor="gray.800"
       display={{
         base: 'flex',
-        md: 'flex',
+        md: 'none',
       }}
     >
       <Box
