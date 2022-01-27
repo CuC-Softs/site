@@ -8,6 +8,7 @@ interface PlyrPlayerProps {
   onPause?: (e: Plyr.PlyrEvent) => void;
   onVolumeChange?: (e: Plyr.PlyrEvent) => void;
   onPlay?: (e: Plyr.PlyrEvent) => void;
+  autoPlay?: boolean;
 }
 
 const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
@@ -15,6 +16,7 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
   onTimeUpdate,
   onPause,
   onPlay,
+  autoPlay = false,
 }) => {
   const videoDivRef = useRef<HTMLDivElement>(null);
   const [plyr, setPlyr] = useState<Plyr | null>(null);
@@ -22,11 +24,18 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
     if (videoDivRef.current) {
       const player = new Plyr(videoDivRef.current, {
         controls: [],
+        speed: { selected: 1, options: [0.5, 1, 2] },
+        autoplay: autoPlay,
       });
       setPlyr(player);
     }
   }, [videoDivRef]);
   useEffect(() => {
+    if (autoPlay) {
+      plyr?.on('ready', () => {
+        console.log('Jorge');
+      });
+    }
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     plyr?.on('timeupdate', onTimeUpdate!);
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
@@ -49,8 +58,7 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
         title="plyr_player"
         src={url}
         allowFullScreen
-        allowTransparency
-        allow="autoplay"
+        allow="autoplay; encrypted-media"
       />
     </div>
   );
