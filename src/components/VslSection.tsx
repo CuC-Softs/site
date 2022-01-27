@@ -7,7 +7,7 @@ const VslSection = () => (
     <h2>Chegou a hora de tirar as ideias do papel</h2>
     <p>Pensou em algum negócio?</p>
     <p>Coloque em prática</p>
-    <Container className="d-flex justify-content-center">
+    <Container className="d-flex justify-content-center p-2">
       <Col xl="10" xs>
         <PlyrPlayer
           url="https://www.youtube.com/watch?v=0Eub-aQs-44"
