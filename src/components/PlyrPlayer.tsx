@@ -20,7 +20,9 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
   const [plyr, setPlyr] = useState<Plyr | null>(null);
   useEffect(() => {
     if (videoDivRef.current) {
-      const player = new Plyr(videoDivRef.current);
+      const player = new Plyr(videoDivRef.current, {
+        controls: [],
+      });
       setPlyr(player);
     }
   }, [videoDivRef]);
