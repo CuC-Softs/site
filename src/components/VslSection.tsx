@@ -5,8 +5,6 @@ import PlyrPlayer, { PLYR_CONTROLS } from './PlyrPlayer';
 const VslSection = () => (
   <Wrapper>
     <h2>Chegou a hora de tirar as ideias do papel</h2>
-    <p>Pensou em algum negócio?</p>
-    <p>Coloque em prática</p>
     <Container className="d-flex justify-content-center p-2">
       <Col xl="10" xs>
         <PlyrPlayer
