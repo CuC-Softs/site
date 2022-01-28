@@ -10,12 +10,11 @@ const VslSection = () => (
     <Container className="d-flex justify-content-center p-2">
       <Col xl="10" xs>
         <PlyrPlayer
-          url="https://www.youtube.com/watch?v=4lEeSwgY4XA"
+          url="https://www.youtube.com/embed/4lEeSwgY4XA?rel=0&amp;modestbranding=1"
           onTimeUpdate={e => console.log(e.detail.plyr.currentTime)}
           onPlay={e => console.log(e)}
           onPause={e => console.log(e)}
           autoPlay
-          controls={[PLYR_CONTROLS.PLAY_LARGE]}
           muted
         />
       </Col>
