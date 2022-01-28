@@ -2,6 +2,26 @@ import React, { useEffect, useState, useRef } from 'react';
 import Plyr from 'plyr';
 import 'plyr/dist/plyr.css';
 
+// eslint-disable-next-line no-shadow
+enum PLYR_CONTROLS {
+  PLAY_LARGE = 'play-large',
+  RESTART = 'restart',
+  REWIND = 'rewind',
+  PLAY = 'play',
+  FAST_FORWARD = 'fast-forward',
+  PROGRESS = 'progress',
+  CURRENT_TIME = 'current-time',
+  DURATION = 'duration',
+  MUTE = 'mute',
+  VOLUME = 'volume',
+  CAPTIONS = 'captions',
+  SETTINGS = 'settings',
+  PIP = 'pip',
+  AIRPLAY = 'airplay',
+  DOWNLOAD = 'download',
+  FULLSCREEN = 'fullscreen',
+}
+
 interface PlyrPlayerProps {
   url: string;
   onTimeUpdate?: (e: Plyr.PlyrEvent) => void;
@@ -9,6 +29,7 @@ interface PlyrPlayerProps {
   onVolumeChange?: (e: Plyr.PlyrEvent) => void;
   onPlay?: (e: Plyr.PlyrEvent) => void;
   autoPlay?: boolean;
+  controls?: Array<PLYR_CONTROLS>;
 }
 
 const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
@@ -17,14 +38,14 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
   onPause,
   onPlay,
   autoPlay = false,
+  controls = [],
 }) => {
   const videoDivRef = useRef<HTMLDivElement>(null);
   const [plyr, setPlyr] = useState<Plyr | null>(null);
   useEffect(() => {
     if (videoDivRef.current) {
       const player = new Plyr(videoDivRef.current, {
-        controls: [],
-        speed: { selected: 1, options: [0.5, 1, 2] },
+        controls,
         autoplay: autoPlay,
       });
       setPlyr(player);
