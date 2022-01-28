@@ -16,6 +16,7 @@ const VslSection = () => (
           onPause={e => console.log(e)}
           autoPlay
           controls={[PLYR_CONTROLS.PLAY_LARGE]}
+          muted
         />
       </Col>
     </Container>

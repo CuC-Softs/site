@@ -30,6 +30,7 @@ interface PlyrPlayerProps {
   onPlay?: (e: Plyr.PlyrEvent) => void;
   autoPlay?: boolean;
   controls?: Array<PLYR_CONTROLS>;
+  muted?: boolean;
 }
 
 const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
@@ -39,6 +40,7 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
   onPlay,
   autoPlay = false,
   controls = [],
+  muted = false,
 }) => {
   const videoDivRef = useRef<HTMLDivElement>(null);
   const [plyr, setPlyr] = useState<Plyr | null>(null);
@@ -46,6 +48,7 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
     if (videoDivRef.current) {
       const player = new Plyr(videoDivRef.current, {
         controls,
+        muted,
         autoplay: autoPlay,
       });
       setPlyr(player);
