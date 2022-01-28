@@ -14,8 +14,6 @@ const VslSection = () => (
           onTimeUpdate={e => console.log(e.detail.plyr.currentTime)}
           onPlay={e => console.log(e)}
           onPause={e => console.log(e)}
-          autoPlay
-          muted
         />
       </Col>
     </Container>
@@ -26,7 +24,7 @@ const Wrapper = styled.div`
   background-color: #0b132b;
   color: #fff;
   text-align: center;
-  /* padding: 20px 100px; */
+  padding: 20px 0px;
 `;
 
 export default VslSection;
