@@ -1,5 +1,6 @@
 import React, { HTMLProps } from 'react';
 import styled from 'styled-components';
+import { vibrate } from './common';
 
 const FragmentOne = () => (
   <SvgOne>
@@ -251,29 +252,33 @@ const Container = styled.div`
   position: absolute;
   top: 220px;
   left: 2.5px;
+  z-index: 2;
 `;
 
 const SvgOne = styled.div`
   position: absolute;
   top: -50px;
   left: 70px;
+  animation: ${vibrate(2)} linear infinite 3s both;
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
   top: 0px;
   left: 40px;
+  animation: ${vibrate(2)} linear infinite 2s both;
 `;
 const SvgThree = styled.div`
   position: absolute;
   top: 30px;
   left: 55px;
+  animation: ${vibrate(2)} linear infinite 2.5s both;
 `;
 const SvgFour = styled.div`
   position: absolute;
   top: 0px;
   left: 110px;
-  z-index: 2;
+  animation: ${vibrate(2)} linear infinite 3.5s both;
 `;
 
 export default FragmentGroupOne;

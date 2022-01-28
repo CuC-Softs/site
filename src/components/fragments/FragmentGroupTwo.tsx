@@ -1,5 +1,6 @@
 import React, { HTMLProps } from 'react';
 import styled from 'styled-components';
+import { vibrate } from './common';
 
 const FragmentOne = () => (
   <SvgOne>
@@ -198,17 +199,20 @@ const SvgOne = styled.div`
   position: absolute;
   top: -50px;
   left: 55px;
+  animation: ${vibrate(2)} linear infinite 3s both;
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
   top: -48px;
   left: 80px;
+  animation: ${vibrate(2)} linear infinite 2s both;
 `;
 const SvgThree = styled.div`
   position: absolute;
   top: -20px;
   left: 65px;
+  animation: ${vibrate(2)} linear infinite 2.5s both;
 `;
 
 export default FragmentGroupTwo;
