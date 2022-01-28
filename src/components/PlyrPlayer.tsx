@@ -3,7 +3,7 @@ import Plyr from 'plyr';
 import 'plyr/dist/plyr.css';
 
 // eslint-disable-next-line no-shadow
-enum PLYR_CONTROLS {
+export enum PLYR_CONTROLS {
   PLAY_LARGE = 'play-large',
   RESTART = 'restart',
   REWIND = 'rewind',
