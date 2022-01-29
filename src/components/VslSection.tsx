@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Col, Container } from 'react-bootstrap';
 import PlyrPlayer, { PLYR_CONTROLS } from './PlyrPlayer';
 import BigFragmentsGroup from './fragments/BigFragmentsGroup';
 import FragmentGroupOne from './fragments/FragmentGroupOne';
@@ -8,43 +7,52 @@ import FragmentGroupThree from './fragments/FragmentGroupThree';
 import FragmentGroupFour from './fragments/FragmentGroupFour';
 
 const VslSection = () => (
-  <Wrapper>
-    <Container className="d-flex flex-column justify-content-center align-items-center p-4 position-relative">
-      <TextBrand className="pb-5">
-        <h2>Chegou a hora de tirar as ideias do papel!</h2>
-      </TextBrand>
-      <BigFragmentsGroup />
-      <FragmentGroupOne />
-      <FragmentGroupTwo />
-      <FragmentGroupThree />
-      <FragmentGroupFour />
-      <Col xl="10" xs>
-        <PlyrPlayer
-          url="https://www.youtube.com/embed/4lEeSwgY4XA?rel=0&amp;modestbranding=1"
-          onTimeUpdate={e => console.log(e.detail.plyr.currentTime)}
-          onPlay={e => console.log(e)}
-          onPause={e => console.log(e)}
-        />
-      </Col>
-    </Container>
-  </Wrapper>
+  <Container>
+    <TextBrand>
+      <h2>Chegou a hora de tirar as ideias do papel!</h2>
+    </TextBrand>
+    <div>
+      {/* <BigFragmentsGroup /> */}
+      {/* <FragmentGroupOne /> */}
+      {/* <FragmentGroupTwo /> */}
+      {/* <FragmentGroupThree /> */}
+      {/* <FragmentGroupFour /> */}
+    </div>
+    <VideoContainer>
+      <PlyrPlayer
+        url="https://www.youtube.com/embed/4lEeSwgY4XA?rel=0&amp;modestbranding=1"
+        onTimeUpdate={e => console.log(e.detail.plyr.currentTime)}
+        onPlay={e => console.log(e)}
+        onPause={e => console.log(e)}
+      />
+    </VideoContainer>
+  </Container>
 );
 
-const Wrapper = styled.div`
-  background-color: #0b132b;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 100%; */
+  background: linear-gradient(to bottom, #0b132b, #1c2541);
   color: #fff;
-  text-align: center;
-  padding: 20px 0px;
+  padding: 50px 0px;
 `;
 
 const TextBrand = styled.div`
-  width: 600px;
+  width: 75%;
+  text-align: center;
+  margin-bottom: 5%;
   h2 {
-    font-size: 48px;
+    font-size: 2em;
     font-weight: bold;
-    line-height: 72px;
+    line-height: 48px;
   }
   z-index: 1;
+`;
+
+const VideoContainer = styled.div`
+  width: 80%;
 `;
 
 export default VslSection;
