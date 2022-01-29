@@ -1,9 +1,11 @@
-export default {
-  title: 'light',
-  pallete: {
-    primary: '#7159c1',
-    secondary: '#D63AF9',
-    background: '#f5f5f5',
-    text: '#333',
+import { extendTheme } from '@chakra-ui/react';
+
+const colors = {
+  brand: {
+    900: '#1a365d',
+    800: '#153e75',
+    700: '#2a69ac',
   },
 };
+
+export const theme = extendTheme({ colors });
