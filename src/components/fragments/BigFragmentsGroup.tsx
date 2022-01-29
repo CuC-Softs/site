@@ -205,13 +205,13 @@ const SvgOne = styled.div`
   position: absolute;
   animation: ${vibrate(4)} linear infinite 4s both;
   svg {
-    width: 110px;
+    width: 80px;
   }
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
-  left: 140px;
+  left: 120px;
   animation: ${vibrate(2)} linear infinite 3s both;
   svg {
     width: 20px;
@@ -221,7 +221,7 @@ const SvgTwo = styled.div`
 const SvgThree = styled.div`
   position: absolute;
   top: 75px;
-  left: 150px;
+  left: 130px;
   animation: ${vibrate(2)} linear infinite 3s both;
   svg {
     width: 20px;

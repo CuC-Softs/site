@@ -37,6 +37,9 @@ const Container = styled.div`
   background: linear-gradient(to bottom, #0b132b, #1c2541);
   color: #fff;
   padding: 50px 0px;
+  @media (min-width: 768px) {
+    color: #000;
+  }
 `;
 
 const TextBrand = styled.div`
@@ -44,7 +47,7 @@ const TextBrand = styled.div`
   text-align: center;
   margin-bottom: 5%;
   h2 {
-    font-size: 2em;
+    font-size: 1.4em;
     font-weight: bold;
     line-height: 48px;
   }

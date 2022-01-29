@@ -191,8 +191,8 @@ const FragmentGroupFour: React.FC<FragmentGroupFourProps> = ({
 
 const Container = styled.div`
   position: absolute;
-  top: 45%;
-  right: 30%;
+  top: 50%;
+  right: 35%;
   z-index: 2;
 `;
 
@@ -202,26 +202,26 @@ const SvgOne = styled.div`
   left: 70px;
   animation: ${vibrate(2)} linear infinite 3s both;
   svg {
-    width: 20px;
+    width: 15px;
   }
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
   top: -50px;
-  left: 95px;
+  left: 90px;
   animation: ${vibrate(2)} linear infinite 2s both;
   svg {
-    width: 20px;
+    width: 15px;
   }
 `;
 const SvgThree = styled.div`
   position: absolute;
-  top: -20px;
+  top: -25px;
   left: 80px;
   animation: ${vibrate(2)} linear infinite 2.5s both;
   svg {
-    width: 20px;
+    width: 15px;
   }
 `;
 export default FragmentGroupFour;
