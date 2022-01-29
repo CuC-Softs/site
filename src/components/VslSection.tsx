@@ -33,7 +33,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 100%; */
   background: linear-gradient(to bottom, #0b132b, #1c2541);
   color: #fff;
   padding: 50px 0px;
@@ -49,6 +48,12 @@ const TextBrand = styled.div`
     line-height: 48px;
   }
   z-index: 1;
+  @media (min-width: 360px) {
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+
   @media (min-width: 414px) {
     h2 {
       font-size: 1.6em;

@@ -199,8 +199,11 @@ const Container = styled.div`
   position: absolute;
   top: 3%;
   right: 50%;
-  @media (min-width: 414px) {
+  @media (min-width: 360px) {
     top: 1.5%;
+    right: 45%;
+  }
+  @media (min-width: 390px) {
     right: 42.5%;
   }
 `;
@@ -211,7 +214,7 @@ const SvgOne = styled.div`
   svg {
     width: 80px;
   }
-  @media (min-width: 414px) {
+  @media (min-width: 360px) {
     svg {
       width: 100px;
     }
@@ -225,7 +228,7 @@ const SvgTwo = styled.div`
   svg {
     width: 20px;
   }
-  @media (min-width: 414px) {
+  @media (min-width: 360px) {
     svg {
       width: 25px;
     }
@@ -240,7 +243,7 @@ const SvgThree = styled.div`
   svg {
     width: 20px;
   }
-  @media (min-width: 414px) {
+  @media (min-width: 360px) {
     svg {
       width: 25px;
     }

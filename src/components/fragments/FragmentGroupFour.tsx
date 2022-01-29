@@ -194,9 +194,15 @@ const Container = styled.div`
   top: 50%;
   right: 35%;
   z-index: 2;
+  @media (min-width: 360px) {
+    top: 42.5%;
+    right: 32.5%;
+  }
   @media (min-width: 375px) {
-    top: 55%;
     right: 30%;
+  }
+  @media (min-width: 390px) {
+    top: 38%;
   }
   @media (min-width: 414px) {
     top: 38%;
@@ -212,7 +218,7 @@ const SvgOne = styled.div`
   svg {
     width: 15px;
   }
-  @media (min-width: 414px) {
+  @media (min-width: 360px) {
     svg {
       width: 20px;
     }
@@ -227,7 +233,7 @@ const SvgTwo = styled.div`
   svg {
     width: 15px;
   }
-  @media (min-width: 414px) {
+  @media (min-width: 360px) {
     svg {
       width: 20px;
     }
@@ -241,7 +247,7 @@ const SvgThree = styled.div`
   svg {
     width: 15px;
   }
-  @media (min-width: 414px) {
+  @media (min-width: 360px) {
     svg {
       width: 20px;
     }
