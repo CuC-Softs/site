@@ -132,8 +132,9 @@ const FragmentGroupThree: React.FC<FragmentGroupThreeProps> = ({
 
 const Container = styled.div`
   position: absolute;
-  top: 270px;
-  right: 150px;
+  top: 30%;
+  right: 25%;
+  z-index: 2;
 `;
 
 const SvgOne = styled.div`
@@ -141,13 +142,19 @@ const SvgOne = styled.div`
   top: -50px;
   left: 55px;
   animation: ${vibrate(2)} linear infinite 3s both;
+  svg {
+    width: 20px;
+  }
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
   top: -35px;
-  right: -90px;
+  right: -80px;
   animation: ${vibrate(2)} linear infinite 2s both;
+  svg {
+    width: 20px;
+  }
 `;
 
 export default FragmentGroupThree;
