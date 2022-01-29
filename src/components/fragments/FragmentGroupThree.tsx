@@ -136,8 +136,11 @@ const Container = styled.div`
   right: 30%;
   z-index: 2;
   @media (min-width: 375px) {
-    top: 38%;
     right: 25%;
+  }
+  @media (min-width: 414px) {
+    top: 25%;
+    right: 22.5%;
   }
 `;
 
@@ -149,6 +152,11 @@ const SvgOne = styled.div`
   svg {
     width: 15px;
   }
+  @media (min-width: 414px) {
+    svg {
+      width: 20px;
+    }
+  }
 `;
 
 const SvgTwo = styled.div`
@@ -158,6 +166,11 @@ const SvgTwo = styled.div`
   animation: ${vibrate(2)} linear infinite 2s both;
   svg {
     width: 15px;
+  }
+  @media (min-width: 414px) {
+    svg {
+      width: 20px;
+    }
   }
 `;
 

@@ -37,9 +37,6 @@ const Container = styled.div`
   background: linear-gradient(to bottom, #0b132b, #1c2541);
   color: #fff;
   padding: 50px 0px;
-  @media (min-width: 768px) {
-    color: #000;
-  }
 `;
 
 const TextBrand = styled.div`
@@ -52,6 +49,11 @@ const TextBrand = styled.div`
     line-height: 48px;
   }
   z-index: 1;
+  @media (min-width: 414px) {
+    h2 {
+      font-size: 1.6em;
+    }
+  }
 `;
 
 const VideoContainer = styled.div`

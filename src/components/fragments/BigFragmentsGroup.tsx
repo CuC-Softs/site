@@ -199,6 +199,10 @@ const Container = styled.div`
   position: absolute;
   top: 3%;
   right: 50%;
+  @media (min-width: 414px) {
+    top: 1.5%;
+    right: 42.5%;
+  }
 `;
 
 const SvgOne = styled.div`
@@ -206,6 +210,11 @@ const SvgOne = styled.div`
   animation: ${vibrate(4)} linear infinite 4s both;
   svg {
     width: 80px;
+  }
+  @media (min-width: 414px) {
+    svg {
+      width: 100px;
+    }
   }
 `;
 
@@ -216,6 +225,11 @@ const SvgTwo = styled.div`
   svg {
     width: 20px;
   }
+  @media (min-width: 414px) {
+    svg {
+      width: 25px;
+    }
+  }
 `;
 
 const SvgThree = styled.div`
@@ -225,6 +239,11 @@ const SvgThree = styled.div`
   animation: ${vibrate(2)} linear infinite 3s both;
   svg {
     width: 20px;
+  }
+  @media (min-width: 414px) {
+    svg {
+      width: 25px;
+    }
   }
 `;
 export default BigFragmentsGroup;

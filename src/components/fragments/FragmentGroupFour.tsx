@@ -198,6 +198,10 @@ const Container = styled.div`
     top: 55%;
     right: 30%;
   }
+  @media (min-width: 414px) {
+    top: 38%;
+    right: 30%;
+  }
 `;
 
 const SvgOne = styled.div`
@@ -207,6 +211,11 @@ const SvgOne = styled.div`
   animation: ${vibrate(2)} linear infinite 3s both;
   svg {
     width: 15px;
+  }
+  @media (min-width: 414px) {
+    svg {
+      width: 20px;
+    }
   }
 `;
 
@@ -218,6 +227,11 @@ const SvgTwo = styled.div`
   svg {
     width: 15px;
   }
+  @media (min-width: 414px) {
+    svg {
+      width: 20px;
+    }
+  }
 `;
 const SvgThree = styled.div`
   position: absolute;
@@ -226,6 +240,11 @@ const SvgThree = styled.div`
   animation: ${vibrate(2)} linear infinite 2.5s both;
   svg {
     width: 15px;
+  }
+  @media (min-width: 414px) {
+    svg {
+      width: 20px;
+    }
   }
 `;
 export default FragmentGroupFour;
