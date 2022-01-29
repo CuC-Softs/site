@@ -12,11 +12,11 @@ const VslSection = () => (
       <h2>Chegou a hora de tirar as ideias do papel!</h2>
     </TextBrand>
     <div>
-      {/* <BigFragmentsGroup /> */}
-      {/* <FragmentGroupOne /> */}
-      {/* <FragmentGroupTwo /> */}
-      {/* <FragmentGroupThree /> */}
-      {/* <FragmentGroupFour /> */}
+      <BigFragmentsGroup />
+      <FragmentGroupOne />
+      <FragmentGroupTwo />
+      <FragmentGroupThree />
+      <FragmentGroupFour />
     </div>
     <VideoContainer>
       <PlyrPlayer
