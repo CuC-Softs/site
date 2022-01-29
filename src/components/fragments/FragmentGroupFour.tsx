@@ -194,6 +194,10 @@ const Container = styled.div`
   top: 50%;
   right: 35%;
   z-index: 2;
+  @media (min-width: 375px) {
+    top: 55%;
+    right: 30%;
+  }
 `;
 
 const SvgOne = styled.div`
