@@ -197,25 +197,34 @@ const BigFragmentsGroup: React.FC<BigFragmentsGroupProps> = ({
 
 const Container = styled.div`
   position: absolute;
-  top: 10px;
-  right: 430px;
+  top: 3%;
+  right: 50%;
 `;
 
 const SvgOne = styled.div`
   position: absolute;
   animation: ${vibrate(4)} linear infinite 4s both;
+  svg {
+    width: 110px;
+  }
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
-  left: 200px;
+  left: 140px;
   animation: ${vibrate(2)} linear infinite 3s both;
+  svg {
+    width: 20px;
+  }
 `;
 
 const SvgThree = styled.div`
   position: absolute;
-  top: 100px;
-  left: 280px;
+  top: 75px;
+  left: 150px;
   animation: ${vibrate(2)} linear infinite 3s both;
+  svg {
+    width: 20px;
+  }
 `;
 export default BigFragmentsGroup;
