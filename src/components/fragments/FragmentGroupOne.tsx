@@ -250,16 +250,19 @@ const FragmentGroupOne: React.FC<FragmentGroupOneProps> = ({
 
 const Container = styled.div`
   position: absolute;
-  top: 220px;
-  left: 2.5px;
+  top: 25%;
+  left: -8%;
   z-index: 2;
 `;
 
 const SvgOne = styled.div`
   position: absolute;
-  top: -50px;
-  left: 70px;
+  top: -40px;
+  left: 60px;
   animation: ${vibrate(2)} linear infinite 3s both;
+  svg {
+    width: 20px;
+  }
 `;
 
 const SvgTwo = styled.div`
@@ -267,18 +270,27 @@ const SvgTwo = styled.div`
   top: 0px;
   left: 40px;
   animation: ${vibrate(2)} linear infinite 2s both;
+  svg {
+    width: 20px;
+  }
 `;
 const SvgThree = styled.div`
   position: absolute;
-  top: 30px;
+  top: 25px;
   left: 55px;
   animation: ${vibrate(2)} linear infinite 2.5s both;
+  svg {
+    width: 20px;
+  }
 `;
 const SvgFour = styled.div`
   position: absolute;
   top: 0px;
-  left: 110px;
+  left: 90px;
   animation: ${vibrate(2)} linear infinite 3.5s both;
+  svg {
+    width: 15px;
+  }
 `;
 
 export default FragmentGroupOne;
