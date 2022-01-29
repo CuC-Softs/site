@@ -195,16 +195,26 @@ const Container = styled.div`
   left: -15%;
   z-index: 2;
   @media (min-width: 360px) {
-    top: 42%;
+    top: 45%;
     left: -12.5%;
+  }
+  @media (min-width: 375px) {
+    top: 50%;
   }
   @media (min-width: 390px) {
     top: 40%;
-    left: -12.5%;
   }
   @media (min-width: 414px) {
     top: 35%;
     left: -10%;
+  }
+  @media (min-width: 576px) {
+    top: 65%;
+    left: -5%;
+  }
+  @media (min-width: 768px) {
+    top: 80%;
+    left: 0%;
   }
 `;
 
@@ -222,6 +232,12 @@ const SvgOne = styled.div`
       width: 20px;
     }
   }
+  @media (min-width: 768px) {
+    left: 40px;
+    svg {
+      width: 25px;
+    }
+  }
 `;
 
 const SvgTwo = styled.div`
@@ -235,6 +251,11 @@ const SvgTwo = styled.div`
   @media (min-width: 360px) {
     svg {
       width: 20px;
+    }
+  }
+  @media (min-width: 768px) {
+    svg {
+      width: 25px;
     }
   }
 `;

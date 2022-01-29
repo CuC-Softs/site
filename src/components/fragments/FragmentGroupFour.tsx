@@ -195,10 +195,11 @@ const Container = styled.div`
   right: 35%;
   z-index: 2;
   @media (min-width: 360px) {
-    top: 42.5%;
+    top: 40%;
     right: 32.5%;
   }
   @media (min-width: 375px) {
+    top: 50%;
     right: 30%;
   }
   @media (min-width: 390px) {
@@ -207,6 +208,14 @@ const Container = styled.div`
   @media (min-width: 414px) {
     top: 38%;
     right: 30%;
+  }
+  @media (min-width: 576px) {
+    top: 75%;
+    right: 22.5%;
+  }
+  @media (min-width: 768px) {
+    top: 80%;
+    right: 20%;
   }
 `;
 
@@ -221,6 +230,11 @@ const SvgOne = styled.div`
   @media (min-width: 360px) {
     svg {
       width: 20px;
+    }
+  }
+  @media (min-width: 768px) {
+    svg {
+      width: 25px;
     }
   }
 `;
@@ -238,6 +252,12 @@ const SvgTwo = styled.div`
       width: 20px;
     }
   }
+  @media (min-width: 768px) {
+    left: 100px;
+    svg {
+      width: 25px;
+    }
+  }
 `;
 const SvgThree = styled.div`
   position: absolute;
@@ -250,6 +270,12 @@ const SvgThree = styled.div`
   @media (min-width: 360px) {
     svg {
       width: 20px;
+    }
+  }
+  @media (min-width: 768px) {
+    top: -20px;
+    svg {
+      width: 25px;
     }
   }
 `;

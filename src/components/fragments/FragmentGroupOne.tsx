@@ -254,13 +254,21 @@ const Container = styled.div`
   left: -8%;
   z-index: 2;
   @media (min-width: 360px) {
-    top: 24%;
+    top: 25%;
   }
   @media (min-width: 390px) {
     top: 22.5%;
   }
   @media (min-width: 414px) {
     top: 20%;
+  }
+  @media (min-width: 576px) {
+    top: 35%;
+    left: -3%;
+  }
+
+  @media (min-width: 768px) {
+    left: 0%;
   }
 `;
 
@@ -275,6 +283,12 @@ const SvgOne = styled.div`
   @media (min-width: 360px) {
     svg {
       width: 20px;
+    }
+  }
+  @media (min-width: 576px) {
+    top: -50px;
+    svg {
+      width: 25px;
     }
   }
 `;
@@ -292,6 +306,12 @@ const SvgTwo = styled.div`
       width: 20px;
     }
   }
+
+  @media (min-width: 768px) {
+    svg {
+      width: 25px;
+    }
+  }
 `;
 const SvgThree = styled.div`
   position: absolute;
@@ -306,6 +326,11 @@ const SvgThree = styled.div`
       width: 20px;
     }
   }
+  @media (min-width: 768px) {
+    svg {
+      width: 25px;
+    }
+  }
 `;
 const SvgFour = styled.div`
   position: absolute;
@@ -318,6 +343,11 @@ const SvgFour = styled.div`
   @media (min-width: 360px) {
     svg {
       width: 15px;
+    }
+  }
+  @media (min-width: 768px) {
+    svg {
+      width: 25px;
     }
   }
 `;
