@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, HTMLProps } from 'react';
 import Plyr from 'plyr';
 import 'plyr/dist/plyr.css';
 
@@ -22,32 +22,34 @@ export enum PLYR_CONTROLS {
   FULLSCREEN = 'fullscreen',
 }
 
-interface PlyrPlayerProps {
+interface PlyrPlayerProps extends HTMLProps<HTMLDivElement> {
   url: string;
-  onTimeUpdate?: (e: Plyr.PlyrEvent) => void;
-  onPause?: (e: Plyr.PlyrEvent) => void;
-  onVolumeChange?: (e: Plyr.PlyrEvent) => void;
-  onPlay?: (e: Plyr.PlyrEvent) => void;
+  onPlyrTimeUpdate?: (e: Plyr.PlyrEvent) => void;
+  onPlyrPause?: (e: Plyr.PlyrEvent) => void;
+  onPlyrVolumeChange?: (e: Plyr.PlyrEvent) => void;
+  onPlyrPlay?: (e: Plyr.PlyrEvent) => void;
   autoPlay?: boolean;
-  controls?: Array<PLYR_CONTROLS>;
+  plyrControls?: Array<PLYR_CONTROLS>;
   muted?: boolean;
 }
 
 const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
   url,
-  onTimeUpdate,
-  onPause,
-  onPlay,
+  onPlyrTimeUpdate,
+  onPlyrPause,
+  onPlyrPlay,
+  onPlyrVolumeChange,
   autoPlay = false,
-  controls = [],
+  plyrControls = [],
   muted = false,
+  ...rest
 }) => {
   const videoDivRef = useRef<HTMLDivElement>(null);
   const [plyr, setPlyr] = useState<Plyr | null>(null);
   useEffect(() => {
     if (videoDivRef.current) {
       const player = new Plyr(videoDivRef.current, {
-        controls,
+        controls: plyrControls,
         muted,
         autoplay: autoPlay,
       });
@@ -55,29 +57,29 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
     }
   }, [videoDivRef]);
   useEffect(() => {
-    if (autoPlay) {
-      plyr?.on('ready', () => {
-        console.log('Jorge');
-      });
-    }
+    videoDivRef.current.className = `plyr__video-embed ${rest.className}`;
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    plyr?.on('timeupdate', onTimeUpdate!);
+    plyr?.on('timeupdate', onPlyrTimeUpdate!);
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    plyr?.on('play', onPlay!);
+    plyr?.on('play', onPlyrPlay!);
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    plyr?.on('pause', onPause!);
+    plyr?.on('pause', onPlyrPause!);
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    plyr?.on('volumechange', onPlyrVolumeChange!);
 
     return () => {
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      plyr?.off('timeupdate', onTimeUpdate!);
+      plyr?.off('timeupdate', onPlyrTimeUpdate!);
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      plyr?.off('play', onPlay!);
+      plyr?.off('play', onPlyrPlay!);
       // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      plyr?.off('pause', onPause!);
+      plyr?.off('pause', onPlyrPause!);
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      plyr?.off('volumechange', onPlyrVolumeChange!);
     };
-  }, [plyr, onTimeUpdate]);
+  }, [plyr]);
   return (
-    <div className="plyr__video-embed" id="player" ref={videoDivRef}>
+    <div className="plyr__video-embed" ref={videoDivRef} {...rest}>
       <iframe
         title="plyr_player"
         src={url}
