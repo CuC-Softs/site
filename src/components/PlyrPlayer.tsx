@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef, HTMLProps } from 'react';
-import Plyr from 'plyr';
 import 'plyr/dist/plyr.css';
 
 // eslint-disable-next-line no-shadow
@@ -47,14 +46,18 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
   const videoDivRef = useRef<HTMLDivElement>(null);
   const [plyr, setPlyr] = useState<Plyr | null>(null);
   useEffect(() => {
-    if (videoDivRef.current) {
-      const player = new Plyr(videoDivRef.current, {
-        controls: plyrControls,
-        muted,
-        autoplay: autoPlay,
+    import('plyr')
+      .then(x => x.default)
+      .then(Plyr => {
+        if (videoDivRef.current && document) {
+          const player = new Plyr(videoDivRef.current, {
+            controls: plyrControls,
+            muted,
+            autoplay: autoPlay,
+          });
+          setPlyr(player);
+        }
       });
-      setPlyr(player);
-    }
   }, [videoDivRef]);
   useEffect(() => {
     videoDivRef.current.className = `plyr__video-embed ${rest.className}`;
