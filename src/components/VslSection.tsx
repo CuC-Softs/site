@@ -1,29 +1,37 @@
 import styled from 'styled-components';
-import PlyrPlayer, { PLYR_CONTROLS } from './PlyrPlayer';
+import React from 'react';
+import PlyrPlayer from './PlyrPlayer';
 import BigFragmentsGroup from './fragments/BigFragmentsGroup';
-import FragmentGroupOne from './fragments/FragmentGroupOne';
-import FragmentGroupTwo from './fragments/FragmentGroupTwo';
-import FragmentGroupThree from './fragments/FragmentGroupThree';
-import FragmentGroupFour from './fragments/FragmentGroupFour';
+import FragmentGroupTopLeft from './fragments/FragmentGroupTopLeft';
+import FragmentGroupBottomLeft from './fragments/FragmentGroupBottomLeft';
+import FragmentGroupTopRight from './fragments/FragmentGroupTopRight';
+import FragmentGroupBottomRight from './fragments/FragmentGroupBottomRight';
 
 const VslSection = () => (
   <Container>
-    <TextBrand>
-      <h2>Chegou a hora de tirar as ideias do papel!</h2>
-    </TextBrand>
-    <div>
-      <BigFragmentsGroup />
-      <FragmentGroupOne />
-      <FragmentGroupTwo />
-      <FragmentGroupThree />
-      <FragmentGroupFour />
-    </div>
     <VideoContainer>
-      <PlyrPlayer
+      <VslFragmentsContainer>
+        <div className="big-fragments-group">
+          <BigFragmentsGroup />
+        </div>
+        <div className="fragment-group-top-left">
+          <FragmentGroupTopLeft />
+        </div>
+        <div className="fragment-group-bottom-left">
+          <FragmentGroupBottomLeft />
+        </div>
+        <div className="fragment-group-top-right">
+          <FragmentGroupTopRight />
+        </div>
+        <div className="fragment-group-bottom-right">
+          <FragmentGroupBottomRight />
+        </div>
+      </VslFragmentsContainer>
+      <MyPlyrPlayer
         url="https://www.youtube.com/embed/4lEeSwgY4XA?rel=0&amp;modestbranding=1"
-        onTimeUpdate={e => console.log(e.detail.plyr.currentTime)}
-        onPlay={e => console.log(e)}
-        onPause={e => console.log(e)}
+        onPlyrTimeUpdate={e => console.log(e.detail.plyr.currentTime)}
+        onPlyrPlay={e => console.log(e)}
+        onPlyrPause={e => console.log(e)}
       />
     </VideoContainer>
   </Container>
@@ -35,46 +43,58 @@ const Container = styled.div`
   align-items: center;
   background: linear-gradient(to bottom, #0b132b, #1c2541);
   color: #fff;
-  padding: 50px 0px;
 `;
 
-const TextBrand = styled.div`
-  width: 75%;
-  text-align: center;
-  margin-bottom: 5%;
-  h2 {
-    font-size: 1.4em;
-    font-weight: bold;
-    line-height: 48px;
+const VslFragmentsContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  & > div {
+    position: absolute;
+    z-index: 2;
   }
-  z-index: 1;
-  @media (min-width: 360px) {
-    h2 {
-      font-size: 1.5em;
-    }
+  .big-fragments-group {
+    left: 75%;
+    top: -30%;
+    width: 25%;
+    height: 30%;
   }
-
-  @media (min-width: 414px) {
-    h2 {
-      font-size: 1.6em;
-    }
+  .fragment-group-top-left {
+    left: -5%;
+    top: -10%;
+    width: 10%;
+    height: 30%;
   }
-
-  @media (min-width: 768px) {
-    h2 {
-      font-size: 2.2em;
-    }
+  .fragment-group-bottom-left {
+    left: -10%;
+    top: 40%;
+    width: 10%;
+    height: 10%;
   }
-
-  @media (min-width: 1024px) {
-    h2 {
-      font-size: 2.6em;
-    }
+  .fragment-group-top-right {
+    right: -8%;
+    top: 0%;
+    width: 10%;
+    height: 10%;
+  }
+  .fragment-group-bottom-right {
+    right: -10%;
+    top: 35%;
+    width: 10%;
+    height: 10%;
   }
 `;
 
 const VideoContainer = styled.div`
   width: 80%;
+  max-width: 1024px;
+  position: relative;
+`;
+
+const MyPlyrPlayer = styled(PlyrPlayer)`
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
 `;
 
 export default VslSection;
