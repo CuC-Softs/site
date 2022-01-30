@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+.cache/
+public
+
 # production
 /build
 
