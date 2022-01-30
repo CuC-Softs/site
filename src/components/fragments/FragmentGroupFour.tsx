@@ -217,6 +217,9 @@ const Container = styled.div`
     top: 80%;
     right: 20%;
   }
+  @media (min-width: 1024px) {
+    right: 18%;
+  }
 `;
 
 const SvgOne = styled.div`
@@ -235,6 +238,11 @@ const SvgOne = styled.div`
   @media (min-width: 768px) {
     svg {
       width: 25px;
+    }
+  }
+  @media (min-width: 1024px) {
+    svg {
+      width: 30px;
     }
   }
 `;
@@ -258,6 +266,12 @@ const SvgTwo = styled.div`
       width: 25px;
     }
   }
+  @media (min-width: 1024px) {
+    left: 110px;
+    svg {
+      width: 30px;
+    }
+  }
 `;
 const SvgThree = styled.div`
   position: absolute;
@@ -276,6 +290,12 @@ const SvgThree = styled.div`
     top: -20px;
     svg {
       width: 25px;
+    }
+  }
+  @media (min-width: 1024px) {
+    top: -15px;
+    svg {
+      width: 30px;
     }
   }
 `;

@@ -216,6 +216,9 @@ const Container = styled.div`
     top: 80%;
     left: 0%;
   }
+  @media (min-width: 1024px) {
+    top: 90%;
+  }
 `;
 
 const SvgOne = styled.div`
@@ -238,6 +241,11 @@ const SvgOne = styled.div`
       width: 25px;
     }
   }
+  @media (min-width: 1024px) {
+    svg {
+      width: 30px;
+    }
+  }
 `;
 
 const SvgTwo = styled.div`
@@ -258,6 +266,11 @@ const SvgTwo = styled.div`
       width: 25px;
     }
   }
+  @media (min-width: 1024px) {
+    svg {
+      width: 30px;
+    }
+  }
 `;
 const SvgThree = styled.div`
   position: absolute;
@@ -272,6 +285,11 @@ const SvgThree = styled.div`
     left: 60px;
     svg {
       width: 20px;
+    }
+  }
+  @media (min-width: 1024px) {
+    svg {
+      width: 25px;
     }
   }
 `;

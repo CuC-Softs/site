@@ -65,6 +65,12 @@ const TextBrand = styled.div`
       font-size: 2.2em;
     }
   }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 2.6em;
+    }
+  }
 `;
 
 const VideoContainer = styled.div`

@@ -212,11 +212,17 @@ const SvgOne = styled.div`
   position: absolute;
   animation: ${vibrate(4)} linear infinite 4s both;
   svg {
-    width: 80px;
+    width: 70px;
   }
   @media (min-width: 360px) {
     svg {
       width: 100px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    svg {
+      width: 120px;
     }
   }
 `;
@@ -226,11 +232,17 @@ const SvgTwo = styled.div`
   left: 120px;
   animation: ${vibrate(2)} linear infinite 3s both;
   svg {
-    width: 20px;
+    width: 15px;
   }
   @media (min-width: 360px) {
     svg {
       width: 25px;
+    }
+  }
+  @media (min-width: 1024px) {
+    left: 160px;
+    svg {
+      width: 30px;
     }
   }
 `;
@@ -241,11 +253,17 @@ const SvgThree = styled.div`
   left: 130px;
   animation: ${vibrate(2)} linear infinite 3s both;
   svg {
-    width: 20px;
+    width: 15px;
   }
   @media (min-width: 360px) {
     svg {
       width: 25px;
+    }
+  }
+  @media (min-width: 1024px) {
+    left: 190px;
+    svg {
+      width: 30px;
     }
   }
 `;

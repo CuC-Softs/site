@@ -291,6 +291,11 @@ const SvgOne = styled.div`
       width: 25px;
     }
   }
+  @media (min-width: 1024px) {
+    svg {
+      width: 30px;
+    }
+  }
 `;
 
 const SvgTwo = styled.div`
@@ -312,6 +317,12 @@ const SvgTwo = styled.div`
       width: 25px;
     }
   }
+  @media (min-width: 1024px) {
+    top: -10px;
+    svg {
+      width: 30px;
+    }
+  }
 `;
 const SvgThree = styled.div`
   position: absolute;
@@ -331,6 +342,12 @@ const SvgThree = styled.div`
       width: 25px;
     }
   }
+  @media (min-width: 1024px) {
+    top: 20px;
+    svg {
+      width: 30px;
+    }
+  }
 `;
 const SvgFour = styled.div`
   position: absolute;
@@ -348,6 +365,12 @@ const SvgFour = styled.div`
   @media (min-width: 768px) {
     svg {
       width: 25px;
+    }
+  }
+  @media (min-width: 1024px) {
+    left: 90px;
+    svg {
+      width: 30px;
     }
   }
 `;

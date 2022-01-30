@@ -157,6 +157,9 @@ const Container = styled.div`
   @media (min-width: 768px) {
     top: 42.5%;
   }
+  @media (min-width: 1024px) {
+    right: 15%;
+  }
 `;
 
 const SvgOne = styled.div`
@@ -175,6 +178,11 @@ const SvgOne = styled.div`
   @media (min-width: 768px) {
     svg {
       width: 25px;
+    }
+  }
+  @media (min-width: 1024px) {
+    svg {
+      width: 30px;
     }
   }
 `;
@@ -196,6 +204,13 @@ const SvgTwo = styled.div`
     right: -90px;
     svg {
       width: 25px;
+    }
+  }
+  @media (min-width: 1024px) {
+    top: -25px;
+    right: -100px;
+    svg {
+      width: 30px;
     }
   }
 `;
