@@ -1,16 +1,10 @@
 import React, { HTMLProps } from 'react';
 import styled from 'styled-components';
-import { vibrate } from './common';
+import { FragmentContainer, vibrate } from './common';
 
 const FragmentOne = () => (
   <SvgOne>
-    <svg
-      width="144"
-      height="177"
-      viewBox="0 0 144 177"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 144 177" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_457_247)">
         <path
           fillRule="evenodd"
@@ -64,13 +58,7 @@ const FragmentOne = () => (
 
 const FragmentTwo = () => (
   <SvgTwo>
-    <svg
-      width="44"
-      height="58"
-      viewBox="0 0 44 58"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 44 58" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_457_246)">
         <path
           fillRule="evenodd"
@@ -124,13 +112,7 @@ const FragmentTwo = () => (
 
 const FragmentThree = () => (
   <SvgThree>
-    <svg
-      width="46"
-      height="62"
-      viewBox="0 0 46 62"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 46 62" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_457_245)">
         <path
           fillRule="evenodd"
@@ -188,83 +170,35 @@ const BigFragmentsGroup: React.FC<BigFragmentsGroupProps> = ({
   style,
   className,
 }) => (
-  <Container style={style} className={className}>
+  <FragmentContainer style={style} className={className}>
     <FragmentOne />
     <FragmentTwo />
     <FragmentThree />
-  </Container>
+  </FragmentContainer>
 );
-
-const Container = styled.div`
-  position: absolute;
-  top: 3%;
-  right: 50%;
-  @media (min-width: 360px) {
-    top: 1.5%;
-    right: 45%;
-  }
-  @media (min-width: 390px) {
-    right: 42.5%;
-  }
-`;
 
 const SvgOne = styled.div`
   position: absolute;
   animation: ${vibrate(4)} linear infinite 4s both;
-  svg {
-    width: 70px;
-  }
-  @media (min-width: 360px) {
-    svg {
-      width: 100px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    svg {
-      width: 120px;
-    }
-  }
+  width: 60%;
+  height: 90%;
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
-  left: 120px;
-  animation: ${vibrate(2)} linear infinite 3s both;
-  svg {
-    width: 15px;
-  }
-  @media (min-width: 360px) {
-    svg {
-      width: 25px;
-    }
-  }
-  @media (min-width: 1024px) {
-    left: 160px;
-    svg {
-      width: 30px;
-    }
-  }
+  right: 13%;
+  top: 8%;
+  width: 15%;
+  height: 23%;
+  animation: ${vibrate(6)} linear infinite 3s both;
 `;
 
 const SvgThree = styled.div`
   position: absolute;
-  top: 75px;
-  left: 130px;
-  animation: ${vibrate(2)} linear infinite 3s both;
-  svg {
-    width: 15px;
-  }
-  @media (min-width: 360px) {
-    svg {
-      width: 25px;
-    }
-  }
-  @media (min-width: 1024px) {
-    left: 190px;
-    svg {
-      width: 30px;
-    }
-  }
+  bottom: 10%;
+  right: 0%;
+  width: 15%;
+  height: 23%;
+  animation: ${vibrate(6)} linear infinite 3s both;
 `;
 export default BigFragmentsGroup;
