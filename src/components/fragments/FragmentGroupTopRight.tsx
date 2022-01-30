@@ -1,16 +1,10 @@
 import React, { HTMLProps } from 'react';
 import styled from 'styled-components';
-import { vibrate } from './common';
+import { FragmentContainer, vibrate } from './common';
 
 const FragmentOne = () => (
   <SvgOne>
-    <svg
-      width="31"
-      height="42"
-      viewBox="0 0 31 42"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 31 42" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_443_204)">
         <path
           d="M4 22.665L4.21698 3.46116L27 0L22.9858 23L4 22.665Z"
@@ -62,13 +56,7 @@ const FragmentOne = () => (
 
 const FragmentTwo = () => (
   <SvgTwo>
-    <svg
-      width="31"
-      height="42"
-      viewBox="0 0 31 42"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 31 42" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_448_231)">
         <path
           d="M4 22.665L4.21698 3.46116L27 0L22.9858 23L4 22.665Z"
@@ -118,101 +106,34 @@ const FragmentTwo = () => (
   </SvgTwo>
 );
 
-type FragmentGroupThreeProps = HTMLProps<HTMLDivElement>;
+type FragmentGroupTopRightProps = HTMLProps<HTMLDivElement>;
 
-const FragmentGroupThree: React.FC<FragmentGroupThreeProps> = ({
+const FragmentGroupTopRight: React.FC<FragmentGroupTopRightProps> = ({
   style,
   className,
 }) => (
-  <Container style={style} className={className}>
+  <FragmentContainer style={style} className={className}>
     <FragmentOne />
     <FragmentTwo />
-  </Container>
+  </FragmentContainer>
 );
-
-const Container = styled.div`
-  position: absolute;
-  top: 38%;
-  right: 30%;
-  z-index: 2;
-  @media (min-width: 360px) {
-    top: 30%;
-    right: 25%;
-  }
-  @media (min-width: 375px) {
-    top: 35%;
-  }
-
-  @media (min-width: 390px) {
-    top: 26%;
-  }
-  @media (min-width: 414px) {
-    top: 25%;
-    right: 22.5%;
-  }
-  @media (min-width: 576px) {
-    top: 40%;
-    right: 18%;
-  }
-  @media (min-width: 768px) {
-    top: 42.5%;
-  }
-  @media (min-width: 1024px) {
-    right: 15%;
-  }
-`;
 
 const SvgOne = styled.div`
   position: absolute;
-  top: -50px;
-  left: 55px;
-  animation: ${vibrate(2)} linear infinite 3s both;
-  svg {
-    width: 15px;
-  }
-  @media (min-width: 360px) {
-    svg {
-      width: 20px;
-    }
-  }
-  @media (min-width: 768px) {
-    svg {
-      width: 25px;
-    }
-  }
-  @media (min-width: 1024px) {
-    svg {
-      width: 30px;
-    }
-  }
+  top: 10%;
+  left: 15%;
+  width: 25%;
+  height: 25%;
+  animation: ${vibrate(6)} linear infinite 2s both;
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
-  top: -35px;
-  right: -80px;
-  animation: ${vibrate(2)} linear infinite 2s both;
-  svg {
-    width: 15px;
-  }
-  @media (min-width: 360px) {
-    svg {
-      width: 20px;
-    }
-  }
-  @media (min-width: 768px) {
-    right: -90px;
-    svg {
-      width: 25px;
-    }
-  }
-  @media (min-width: 1024px) {
-    top: -25px;
-    right: -100px;
-    svg {
-      width: 30px;
-    }
-  }
+  top: 50%;
+  left: 25%;
+  width: 25%;
+  height: 25%;
+  animation: ${vibrate(6)} linear infinite 2s both;
 `;
 
-export default FragmentGroupThree;
+export default FragmentGroupTopRight;

@@ -1,27 +1,21 @@
 import React, { HTMLProps } from 'react';
 import styled from 'styled-components';
-import { vibrate } from './common';
+import { FragmentContainer, vibrate } from './common';
 
 const FragmentOne = () => (
   <SvgOne>
-    <svg
-      width="31"
-      height="42"
-      viewBox="0 0 31 42"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g filter="url(#filter0_d_448_233)">
+    <svg viewBox="0 0 31 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter0_d_443_202)">
         <path
           d="M4 22.665L4.21698 3.46116L27 0L22.9858 23L4 22.665Z"
           fill="#CF721C"
-          fillOpacity="0.5"
+          fillOpacity="0.4"
           shapeRendering="crispEdges"
         />
       </g>
       <defs>
         <filter
-          id="filter0_d_448_233"
+          id="filter0_d_443_202"
           x="0"
           y="0"
           width="31"
@@ -46,12 +40,12 @@ const FragmentOne = () => (
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_448_233"
+            result="effect1_dropShadow_443_202"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_448_233"
+            in2="effect1_dropShadow_443_202"
             result="shape"
           />
         </filter>
@@ -62,24 +56,18 @@ const FragmentOne = () => (
 
 const FragmentTwo = () => (
   <SvgTwo>
-    <svg
-      width="31"
-      height="42"
-      viewBox="0 0 31 42"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g filter="url(#filter0_d_448_232)">
+    <svg viewBox="0 0 31 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter0_d_443_206)">
         <path
           d="M4 22.665L4.21698 3.46116L27 0L22.9858 23L4 22.665Z"
           fill="#CF721C"
-          fillOpacity="0.5"
+          fillOpacity="0.4"
           shapeRendering="crispEdges"
         />
       </g>
       <defs>
         <filter
-          id="filter0_d_448_232"
+          id="filter0_d_443_206"
           x="0"
           y="0"
           width="31"
@@ -104,12 +92,12 @@ const FragmentTwo = () => (
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_448_232"
+            result="effect1_dropShadow_443_206"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_448_232"
+            in2="effect1_dropShadow_443_206"
             result="shape"
           />
         </filter>
@@ -120,28 +108,22 @@ const FragmentTwo = () => (
 
 const FragmentThree = () => (
   <SvgThree>
-    <svg
-      width="31"
-      height="42"
-      viewBox="0 0 31 42"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g filter="url(#filter0_d_443_203)">
+    <svg viewBox="0 0 20 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter0_d_443_205)">
         <path
-          d="M4 22.665L4.21698 3.46116L27 0L22.9858 23L4 22.665Z"
+          d="M4 11.8252L4.11321 1.80582L16 0L13.9057 12L4 11.8252Z"
           fill="#CF721C"
-          fillOpacity="0.5"
+          fillOpacity="0.4"
           shapeRendering="crispEdges"
         />
       </g>
       <defs>
         <filter
-          id="filter0_d_443_203"
+          id="filter0_d_443_205"
           x="0"
           y="0"
-          width="31"
-          height="42"
+          width="20"
+          height="31"
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
@@ -162,12 +144,12 @@ const FragmentThree = () => (
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_443_203"
+            result="effect1_dropShadow_443_205"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_443_203"
+            in2="effect1_dropShadow_443_205"
             result="shape"
           />
         </filter>
@@ -176,127 +158,43 @@ const FragmentThree = () => (
   </SvgThree>
 );
 
-type FragmentGroupFourProps = HTMLProps<HTMLDivElement>;
+type FragmentGroupBottomLeftProps = HTMLProps<HTMLDivElement>;
 
-const FragmentGroupFour: React.FC<FragmentGroupFourProps> = ({
+const FragmentGroupBottomLeft: React.FC<FragmentGroupBottomLeftProps> = ({
   style,
   className,
 }) => (
-  <Container style={style} className={className}>
+  <FragmentContainer style={style} className={className}>
     <FragmentOne />
     <FragmentTwo />
     <FragmentThree />
-  </Container>
+  </FragmentContainer>
 );
-
-const Container = styled.div`
-  position: absolute;
-  top: 50%;
-  right: 35%;
-  z-index: 2;
-  @media (min-width: 360px) {
-    top: 40%;
-    right: 32.5%;
-  }
-  @media (min-width: 375px) {
-    top: 50%;
-    right: 30%;
-  }
-  @media (min-width: 390px) {
-    top: 38%;
-  }
-  @media (min-width: 414px) {
-    top: 38%;
-    right: 30%;
-  }
-  @media (min-width: 576px) {
-    top: 75%;
-    right: 22.5%;
-  }
-  @media (min-width: 768px) {
-    top: 80%;
-    right: 20%;
-  }
-  @media (min-width: 1024px) {
-    right: 18%;
-  }
-`;
 
 const SvgOne = styled.div`
   position: absolute;
-  top: -50px;
-  left: 70px;
-  animation: ${vibrate(2)} linear infinite 3s both;
-  svg {
-    width: 15px;
-  }
-  @media (min-width: 360px) {
-    svg {
-      width: 20px;
-    }
-  }
-  @media (min-width: 768px) {
-    svg {
-      width: 25px;
-    }
-  }
-  @media (min-width: 1024px) {
-    svg {
-      width: 30px;
-    }
-  }
+  top: 0%;
+  right: 0%;
+  width: 30%;
+  height: 30%;
+  animation: ${vibrate(6)} linear infinite 3s both;
 `;
 
 const SvgTwo = styled.div`
   position: absolute;
-  top: -50px;
-  left: 90px;
-  animation: ${vibrate(2)} linear infinite 2s both;
-  svg {
-    width: 15px;
-  }
-  @media (min-width: 360px) {
-    svg {
-      width: 20px;
-    }
-  }
-  @media (min-width: 768px) {
-    left: 100px;
-    svg {
-      width: 25px;
-    }
-  }
-  @media (min-width: 1024px) {
-    left: 110px;
-    svg {
-      width: 30px;
-    }
-  }
+  bottom: 30%;
+  right: 30%;
+  width: 20%;
+  height: 20%;
+  animation: ${vibrate(6)} linear infinite 2s both;
 `;
 const SvgThree = styled.div`
   position: absolute;
-  top: -25px;
-  left: 80px;
-  animation: ${vibrate(2)} linear infinite 2.5s both;
-  svg {
-    width: 15px;
-  }
-  @media (min-width: 360px) {
-    svg {
-      width: 20px;
-    }
-  }
-  @media (min-width: 768px) {
-    top: -20px;
-    svg {
-      width: 25px;
-    }
-  }
-  @media (min-width: 1024px) {
-    top: -15px;
-    svg {
-      width: 30px;
-    }
-  }
+  top: 0%;
+  left: 40%;
+  width: 30%;
+  height: 30%;
+  animation: ${vibrate(6)} linear infinite 2.5s both;
 `;
-export default FragmentGroupFour;
+
+export default FragmentGroupBottomLeft;
