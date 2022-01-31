@@ -29,9 +29,6 @@ const VslSection = () => (
       </VslFragmentsContainer>
       <MyPlyrPlayer
         url="https://www.youtube.com/embed/4lEeSwgY4XA?rel=0&amp;modestbranding=1"
-        onPlyrTimeUpdate={e => console.log(e.detail.plyr.currentTime)}
-        onPlyrPlay={e => console.log(e)}
-        onPlyrPause={e => console.log(e)}
       />
     </VideoContainer>
   </Container>
