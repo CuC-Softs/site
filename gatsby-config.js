@@ -1,7 +1,9 @@
 module.exports = {
     siteMetadata: {
       title: `site`,
-        siteUrl: `https://www.yourdomain.tld`,
+      siteUrl: `https://www.yourdomain.tld`,
+      description: `description`,
+      image: `./src/images/icon.png`
     },
     plugins: [
       '@chakra-ui/gatsby-plugin',
@@ -18,6 +20,14 @@ module.exports = {
         options: {
           // Add any options here
         },
-      }
+      },
+      {
+        resolve: "gatsby-plugin-react-svg",
+        options: {
+            rule: {
+                include: `/svg/`,
+            },
+        },
+    },
     ]
 }
