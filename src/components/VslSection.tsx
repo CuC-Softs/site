@@ -27,9 +27,7 @@ const VslSection = () => (
           <FragmentGroupBottomRight />
         </div>
       </VslFragmentsContainer>
-      <MyPlyrPlayer
-        url="https://www.youtube.com/embed/4lEeSwgY4XA?rel=0&amp;modestbranding=1"
-      />
+      <MyPlyrPlayer url="https://www.youtube.com/embed/4lEeSwgY4XA?rel=0&amp;modestbranding=1" />
     </VideoContainer>
   </Container>
 );
@@ -53,7 +51,7 @@ const VslFragmentsContainer = styled.div`
   }
   .big-fragments-group {
     left: 75%;
-    top: -30%;
+    /* top: -30%; */
     width: 25%;
     height: 30%;
   }
