@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/react';
 import Navibar from '../components/Navibar';
 import VslSection from '../components/VslSection';
 import Technologies from '../components/Technologies';
+import Contact from '../components/Contact';
 
 function IndexPage() {
   return (
@@ -10,6 +11,7 @@ function IndexPage() {
       <Navibar />
       <VslSection />
       <Technologies />
+      <Contact />
     </Box>
   );
 }
