@@ -11,11 +11,7 @@ const Contact: React.FC = () => {
     <Box
       w="100%"
       h="800px"
-      bgGradient={[
-        'linear(to-tr, #1c2541, #0b132b)',
-        'linear(to-t, #1c2541, #0b132b)',
-        'linear(to-b, #0b132b, #1c2541)',
-      ]}
+      bgGradient="linear-gradient(180deg, #0B132B 0%, #151D37 25%, #1C2541 72.92%, #0B132B 100%)"
       position="relative"
       zIndex={1}
     >
