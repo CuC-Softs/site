@@ -5,7 +5,7 @@ import VslSection from '../components/VslSection';
 
 function IndexPage() {
   return (
-    <Box w="100vw" h="100vh" bgColor="#0B132B">
+    <Box w="100%" h="100%" bgColor="#0B132B">
       <Navibar />
       <VslSection />
     </Box>

@@ -51,7 +51,7 @@ const VslFragmentsContainer = styled.div`
   }
   .big-fragments-group {
     left: 75%;
-    /* top: -30%; */
+    top: -30%;
     width: 25%;
     height: 30%;
   }
