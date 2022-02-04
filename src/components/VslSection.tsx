@@ -27,9 +27,7 @@ const VslSection = () => (
           <FragmentGroupBottomRight />
         </div>
       </VslFragmentsContainer>
-      <MyPlyrPlayer
-        url="https://www.youtube.com/embed/zzhTbjz0clE?rel=0&amp;modestbranding=1"
-      />
+      <MyPlyrPlayer url="https://www.youtube.com/embed/zzhTbjz0clE?rel=0&amp;modestbranding=1" />
     </VideoContainer>
   </Container>
 );
