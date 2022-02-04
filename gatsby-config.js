@@ -15,6 +15,8 @@ module.exports = {
           pluginConfig: {
             // Puts tracking script in the head instead of the body
             head: true,
+            // Respect users that don't want to be tracked (problably with cookies policy)
+            respectDNT: true,
           },
         },
       },
