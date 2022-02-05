@@ -6,7 +6,6 @@ module.exports = {
       image: `./src/images/icon.png`
     },
     plugins: [
-      '@chakra-ui/gatsby-plugin',
       {
         resolve: `gatsby-plugin-typescript`,
         options: {
@@ -15,6 +14,7 @@ module.exports = {
           allExtensions: true, // defaults to false
         },
       },
+      `gatsby-plugin-sass`,
       {
         resolve: `gatsby-plugin-styled-components`,
         options: {

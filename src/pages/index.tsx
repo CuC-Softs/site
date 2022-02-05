@@ -1,14 +1,15 @@
 import * as React from 'react';
-import { Box } from '@chakra-ui/react';
-import Navibar from '../components/Navibar';
+import Navbar from '../components/Navbar';
 import VslSection from '../components/VslSection';
+
+import { container } from '../styles/pages/index.module.scss';
 
 function IndexPage() {
   return (
-    <Box w="100%" h="100%" bgColor="#0B132B">
-      <Navibar />
+    <div className={container}>
+      <Navbar />
       <VslSection />
-    </Box>
+    </div>
   );
 }
 

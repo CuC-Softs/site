@@ -1,0 +1,38 @@
+.navLocal {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #293241;
+  z-index: 100;
+}
+
+.containerMenuLocal {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.linkMenuLocal {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.buttonMenuLocal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 100%;
+  height: 50px;
+  background-color: #cf721c;
+  box-shadow: 0px 0px 12px #cf721c;
+}
