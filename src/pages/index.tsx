@@ -1,24 +1,22 @@
 import * as React from 'react';
 import { Box } from '@chakra-ui/react';
-import { useEffect } from 'react';
 import VslSection from '../components/VslSection';
+import { useFbq } from '../contexts/FacebookPixelContext';
+import MainTemplate from '../templates/main';
 
 function IndexPage() {
-  useEffect(() => {
-    import('react-facebook-pixel')
-      .then(x => x.default)
-      .then(ReactPixelFB => {
-        if (typeof window !== 'undefined') {
-          const ReactPixel = ReactPixelFB;
-          ReactPixel.init('249251460695363');
-          ReactPixel.pageView();
-        }
-      });
-  }, []);
+  const { fbq } = useFbq();
+  const videoPlayEventHandler = (e: Plyr.PlyrEvent) => {
+    if (e.detail.plyr.currentTime > 2) {
+      fbq.trackCustom('VideoProgress', {});
+    }
+  };
   return (
-    <Box width="100%">
-      <VslSection />
-    </Box>
+    <MainTemplate>
+      <Box width="100%">
+        <VslSection videoPlayEventHandler={videoPlayEventHandler} />
+      </Box>
+    </MainTemplate>
   );
 }
 
