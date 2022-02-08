@@ -7,7 +7,7 @@ import FragmentGroupBottomLeft from './fragments/FragmentGroupBottomLeft';
 import FragmentGroupTopRight from './fragments/FragmentGroupTopRight';
 import FragmentGroupBottomRight from './fragments/FragmentGroupBottomRight';
 
-const VslSection = () => (
+const VslSection = ({ videoPlayEventHandler }) => (
   <Container>
     <VideoContainer>
       <VslFragmentsContainer>
@@ -27,7 +27,10 @@ const VslSection = () => (
           <FragmentGroupBottomRight />
         </div>
       </VslFragmentsContainer>
-      <MyPlyrPlayer url="https://www.youtube.com/embed/zzhTbjz0clE?rel=0&amp;modestbranding=1" />
+      <MyPlyrPlayer
+        url="https://www.youtube.com/embed/zzhTbjz0clE?rel=0&amp;modestbranding=1"
+        onPlyrTimeUpdate={e => videoPlayEventHandler(e)}
+      />
     </VideoContainer>
   </Container>
 );
