@@ -26,7 +26,7 @@ export const withFacebookPixel = <P extends object>(
     componentDidUpdate(prevProps: P, prevState: withFacebookPixelData) {
       const { fbq } = this.state;
       if (prevState.fbq !== fbq) {
-        fbq.init('249251460695363');
+        fbq.init(`${process.env.FACEBOOK_PIXEL_ID}`);
         fbq.pageView();
       }
     }

@@ -12,5 +12,3 @@ function IndexPage({ fbq }) {
 }
 
 export default withFacebookPixel(IndexPage);
-
-// usar uma variável de ambiente pra o pixel id
