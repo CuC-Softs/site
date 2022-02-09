@@ -1,23 +1,19 @@
 import * as React from 'react';
 import { Box } from '@chakra-ui/react';
 import VslSection from '../components/VslSection';
-import { useFbq } from '../contexts/FacebookPixelContext';
-import MainTemplate from '../templates/main';
+import { withFacebookPixel } from '../hocs/withFacebookPixel';
 
-function IndexPage() {
-  const { fbq } = useFbq();
+function IndexPage({ fbq }) {
   const videoPlayEventHandler = (e: Plyr.PlyrEvent) => {
     if (e.detail.plyr.currentTime > 2) {
       fbq.trackCustom('VideoProgress', {});
     }
   };
   return (
-    <MainTemplate>
-      <Box width="100%">
-        <VslSection videoPlayEventHandler={videoPlayEventHandler} />
-      </Box>
-    </MainTemplate>
+    <Box width="100%">
+      <VslSection videoPlayEventHandler={videoPlayEventHandler} />
+    </Box>
   );
 }
 
-export default IndexPage;
+export default withFacebookPixel(IndexPage);
