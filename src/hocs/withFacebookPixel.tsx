@@ -23,6 +23,14 @@ export const withFacebookPixel = <P extends object>(
         });
     }
 
+    componentDidUpdate(prevProps: P, prevState: withFacebookPixelData) {
+      const { fbq } = this.state;
+      if (prevState.fbq !== fbq) {
+        fbq.init('249251460695363');
+        fbq.pageView();
+      }
+    }
+
     render() {
       const { fbq } = this.state;
       return <WrappedComponent {...this.props} fbq={fbq} />;
