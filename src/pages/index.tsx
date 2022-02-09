@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { Box } from '@chakra-ui/react';
 import VslSection from '../components/VslSection';
+import { withFacebookPixel } from '../hocs/withFacebookPixel';
 
-function IndexPage() {
+function IndexPage({ fbq }) {
   return (
     <Box width="100%">
-      <VslSection />
+      <VslSection fbq={fbq} />
     </Box>
   );
 }
 
-export default IndexPage;
+export default withFacebookPixel(IndexPage);
