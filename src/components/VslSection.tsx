@@ -7,33 +7,40 @@ import FragmentGroupBottomLeft from './fragments/FragmentGroupBottomLeft';
 import FragmentGroupTopRight from './fragments/FragmentGroupTopRight';
 import FragmentGroupBottomRight from './fragments/FragmentGroupBottomRight';
 
-const VslSection = ({ videoPlayEventHandler }) => (
-  <Container>
-    <VideoContainer>
-      <VslFragmentsContainer>
-        <div className="big-fragments-group">
-          <BigFragmentsGroup />
-        </div>
-        <div className="fragment-group-top-left">
-          <FragmentGroupTopLeft />
-        </div>
-        <div className="fragment-group-bottom-left">
-          <FragmentGroupBottomLeft />
-        </div>
-        <div className="fragment-group-top-right">
-          <FragmentGroupTopRight />
-        </div>
-        <div className="fragment-group-bottom-right">
-          <FragmentGroupBottomRight />
-        </div>
-      </VslFragmentsContainer>
-      <MyPlyrPlayer
-        url="https://www.youtube.com/embed/zzhTbjz0clE?rel=0&amp;modestbranding=1"
-        onPlyrTimeUpdate={e => videoPlayEventHandler(e)}
-      />
-    </VideoContainer>
-  </Container>
-);
+const VslSection = ({ fbq }) => {
+  const videoPlayEventHandler = (e: Plyr.PlyrEvent) => {
+    if (e.detail.plyr.currentTime > 2) {
+      fbq.trackCustom('VideoProgress', {});
+    }
+  };
+  return (
+    <Container>
+      <VideoContainer>
+        <VslFragmentsContainer>
+          <div className="big-fragments-group">
+            <BigFragmentsGroup />
+          </div>
+          <div className="fragment-group-top-left">
+            <FragmentGroupTopLeft />
+          </div>
+          <div className="fragment-group-bottom-left">
+            <FragmentGroupBottomLeft />
+          </div>
+          <div className="fragment-group-top-right">
+            <FragmentGroupTopRight />
+          </div>
+          <div className="fragment-group-bottom-right">
+            <FragmentGroupBottomRight />
+          </div>
+        </VslFragmentsContainer>
+        <MyPlyrPlayer
+          url="https://www.youtube.com/embed/zzhTbjz0clE?rel=0&amp;modestbranding=1"
+          onPlyrTimeUpdate={e => videoPlayEventHandler(e)}
+        />
+      </VideoContainer>
+    </Container>
+  );
+};
 
 const Container = styled.div`
   display: flex;
