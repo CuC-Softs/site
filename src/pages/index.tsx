@@ -1,15 +1,12 @@
 import * as React from 'react';
-import Navbar from '../components/Navbar';
 import VslSection from '../components/VslSection';
-
-import { container } from '../styles/pages/index.module.scss';
+import { Main } from '../templates/main';
 
 function IndexPage() {
   return (
-    <div className={container}>
-      <Navbar />
+    <Main>
       <VslSection />
-    </div>
+    </Main>
   );
 }
 
