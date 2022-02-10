@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
       title: `site`,
-        siteUrl: `https://xn--usofts-vuab.com.br`,
+      siteUrl: `https://xn--usofts-vuab.com.br`,
     },
     plugins: [
       {
@@ -20,7 +20,6 @@ module.exports = {
           },
         },
       },
-      '@chakra-ui/gatsby-plugin',
       {
         resolve: `gatsby-plugin-typescript`,
         options: {
@@ -29,11 +28,20 @@ module.exports = {
           allExtensions: true, // defaults to false
         },
       },
+      `gatsby-plugin-sass`,
       {
         resolve: `gatsby-plugin-styled-components`,
         options: {
           // Add any options here
         },
-      }
+      },
+      {
+        resolve: "gatsby-plugin-react-svg",
+        options: {
+            rule: {
+                include: `/svg/`,
+            },
+        },
+    },
     ]
 }

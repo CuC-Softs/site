@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Box } from '@chakra-ui/react';
 import VslSection from '../components/VslSection';
+import { Main } from '../templates/main';
 
 function IndexPage() {
   return (
-    <Box width="100%">
+    <Main>
       <VslSection />
-    </Box>
+    </Main>
   );
 }
 
