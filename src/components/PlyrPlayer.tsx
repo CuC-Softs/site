@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useEffect, useState, useRef, HTMLProps } from 'react';
 import 'plyr/dist/plyr.css';
 
@@ -82,7 +85,12 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
     };
   }, [plyr]);
   return (
-    <div className="plyr__video-embed" ref={videoDivRef} {...rest}>
+    <div
+      className="plyr__video-embed"
+      ref={videoDivRef}
+      {...rest}
+      onClick={() => plyr.togglePlay()}
+    >
       <iframe
         title="plyr_player"
         src={url}
