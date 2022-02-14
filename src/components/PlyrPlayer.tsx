@@ -89,13 +89,13 @@ const PlyrPlayer: React.FC<PlyrPlayerProps> = ({
       className="plyr__video-embed"
       ref={videoDivRef}
       {...rest}
-      onClick={() => plyr.togglePlay()}
+      onTouchStart={() => plyr.togglePlay()}
     >
       <iframe
         title="plyr_player"
         src={url}
         allowFullScreen
-        allow="autoplay; encrypted-media"
+        allow="autoplay; encrypted-media; modestbranding"
       />
     </div>
   );
