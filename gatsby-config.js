@@ -4,7 +4,6 @@ module.exports = {
         siteUrl: `https://www.yourdomain.tld`,
     },
     plugins: [
-      '@chakra-ui/gatsby-plugin',
       {
         resolve: `gatsby-plugin-typescript`,
         options: {
