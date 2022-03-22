@@ -1,12 +1,11 @@
 import * as React from 'react';
 import Layout from '../templates/Layout';
+import TecnologiesSection from '../components/tecnologies/TecnologiesSection';
 
 function IndexPage() {
   return (
     <Layout>
-      <section>
-        <h1>Sex</h1>
-      </section>
+      <TecnologiesSection />
     </Layout>
   );
 }
