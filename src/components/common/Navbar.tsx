@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import CucLogo from './CucLogo';
 
 // TODO: WORK WITH MEMOIZATION
-
+// TODO: ADD <HR /> TAG AND STYLE IT
 function Navbar() {
   return (
     <>
@@ -30,7 +30,7 @@ function Navbar() {
           <StyledButton href="#call">Conhecer</StyledButton>
         </div>
       </StyledNav>
-      <hr />
+      {/* <hr /> */}
     </>
   );
 }
