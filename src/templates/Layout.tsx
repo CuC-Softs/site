@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import Navbar from '../components/common/Navbar';
+import Footer from '../components/common/Footer';
 
 function Layout({ children }) {
   return (
@@ -8,9 +9,7 @@ function Layout({ children }) {
       <GlobalStyle />
       <Navbar />
       <div>{children}</div>
-      <footer>
-        <h1>Footer</h1>
-      </footer>
+      <Footer />
     </>
   );
 }
