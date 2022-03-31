@@ -3,7 +3,27 @@ import styled from 'styled-components';
 
 const StyledLogo = styled.div``;
 
-function ReactLogo() {
+export function NodeLogo() {
+  return <div> NodeLogo</div>;
+}
+
+export function GolangLogo() {
+  return <div> NodeLogo</div>;
+}
+
+export function NextLogo() {
+  return <div> NodeLogo</div>;
+}
+
+export function TypeScriptLogo() {
+  return <div> NodeLogo</div>;
+}
+
+export function AdonisLogo() {
+  return <div> NodeLogo</div>;
+}
+
+export function ReactLogo() {
   return (
     <StyledLogo>
       <svg
@@ -82,5 +102,3 @@ function ReactLogo() {
     </StyledLogo>
   );
 }
-
-export default ReactLogo;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import ReactLogo from './tech_images/ReactLogo';
+import { ReactLogo } from './TechLogos';
 
 function TechnologiesSection() {
   return (
