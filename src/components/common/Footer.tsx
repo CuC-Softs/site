@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CucLogo from './CucLogo';
-import GithubVector from './social_vectors/GithubVector';
-import InstagramVector from './social_vectors/InstagramVector';
-import LinkedinVector from './social_vectors/LinkedinVector';
+import { GithubVector, InstagramVector, LinkedinVector } from './SocialVectors';
 
 function Footer() {
   return (
